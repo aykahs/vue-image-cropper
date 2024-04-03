@@ -11,6 +11,16 @@
 <template>
   <image-cropper @confirm="confirm" @real-time="realTime">
     <!-- <template #open></template> -->
+    <template v-slot:title>
+    Image Crop
+    </template>
+    <template v-slot:width>
+      width
+    </template>
+    <template v-slot:high>
+      high
+    </template>
+
   </image-cropper>
   <img style="width: 200px;" :src="imgUrl" :alt="imgUrl">
 </template>

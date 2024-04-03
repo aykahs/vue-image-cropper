@@ -28,10 +28,10 @@
             >
               <div class="tool-main">
                 <div class="tool-title" v-if="isModal">
-                  <solt name="title">
-                    图片裁剪
+                  <slot name="title">
+                    图片裁剪</slot>
                     <span class="close-icon" @click="close"></span>
-                  </solt>
+                 
                 </div>
                 <div
                   ref="toolBoxRef"
@@ -121,7 +121,7 @@
                         <div class="control-box-inner-line control-box-inner-line-right"></div>
                         <!--工具栏提示-->
                         <div class="select-area">
-                          宽:{{ showToolBoxWidth }} 高:{{ showToolBoxHeight }} (x:{{ showToolBoxX }},y:{{
+                          <slot name="width"> 宽 </slot>:{{ showToolBoxWidth }} <slot name="high"> 高 </slot>:{{ showToolBoxHeight }} (x:{{ showToolBoxX }},y:{{
                             showToolBoxY
                           }})
                         </div>
